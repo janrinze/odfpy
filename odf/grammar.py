@@ -722,6 +722,9 @@ allowed_children = {
 		(TEXTNS,u'table-of-content'),
 		(TEXTNS,u'user-index'),
 	),
+        (FIELDNS,u'fieldmark-start'):(
+                (FIELDNS,u'type'),
+        ),
 # allowed_children
 	(FORMNS,u'button') : (
 		(FORMNS,u'properties'),
@@ -2999,6 +3002,8 @@ allowed_children = {
 		(DRAWNS,u'polyline'),
 		(DRAWNS,u'rect'),
 		(DRAWNS,u'regular-polygon'),
+                (FIELDNS,u'fieldmark-start'),
+                (FIELDNS,u'fieldmark-end'),
 		(OFFICENS,u'annotation'),
 		(OFFICENS,u'annotation-end'),
 		(PRESENTATIONNS,u'date-time'),
@@ -6138,6 +6143,8 @@ allowed_attributes = {
 		(TEXTNS,u'id'),
 		(XMLNS,u'id'),
 	),
+        (FIELDNS,u'type'):(),
+
 # allowed_attributes
 	(FORMNS,u'button'):(
 		(XMLNS,u'id'), # First choice

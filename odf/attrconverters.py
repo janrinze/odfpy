@@ -96,7 +96,7 @@ def cnv_duration(attribute, arg, element):
 def cnv_family(attribute, arg, element):
     """ A style family """
     if str(arg) not in ("text", "paragraph", "section", "ruby", "table", "table-column", "table-row", "table-cell",
-      "graphic", "presentation", "drawing-page", "chart"):
+      "graphic", "presentation", "drawing-page", "chart", "field"):
         raise ValueError( "'%s' not allowed" % str(arg))
     return str(arg)
 
@@ -639,6 +639,7 @@ attrconverters = {
 	((DRAWNS,u'visible-area-width'), None): cnv_string,
 	((DRAWNS,u'wrap-influence-on-position'), None): cnv_string,
 	((DRAWNS,u'z-index'), None): cnv_nonNegativeInteger,
+        ((FIELDNS,u'type'), None): cnv_string,
 	((FONS,u'background-color'), None): cnv_string,
 	((FONS,u'border-bottom'), None): cnv_string,
 	((FONS,u'border'), None): cnv_string,

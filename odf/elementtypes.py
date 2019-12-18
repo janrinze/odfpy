@@ -24,6 +24,7 @@ from odf.namespaces import *
 # Inline element don't cause a box
 # They are analogous to the HTML elements SPAN, B, I etc.
 inline_elements = (
+    (FIELDNS,u'type'),
     (TEXTNS,u'a'),
     (TEXTNS,u'author-initials'),
     (TEXTNS,u'author-name'),
